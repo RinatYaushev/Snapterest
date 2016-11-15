@@ -3,6 +3,13 @@ var SnapkiteStreamClient = require('snapkite-stream-client');
 var StreamTweet = require('./StreamTweet.react');
 var Header = require('./Header.react');
 
+var options = {
+  hostname: 'https://snapkite-engine.herokuapp.com/',
+  port: 80,
+  delayInMilliseconds: 1500,
+  cacheNumberOfTweets: 20
+}
+
 var Stream = React.createClass({
 
   getInitialState: function () {
@@ -12,7 +19,7 @@ var Stream = React.createClass({
   },
 
   componentDidMount: function () {
-    SnapkiteStreamClient.initializeStream(this.handleNewTweet);
+    SnapkiteStreamClient.initializeStream(this.handleNewTweet, options);
   },
 
   componentWillUnmount: function () {
