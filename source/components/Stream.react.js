@@ -4,7 +4,7 @@ var StreamTweet = require('./StreamTweet.react');
 var Header = require('./Header.react');
 
 var options = {
-  hostname: 'https://snapkite-engine.herokuapp.com/',
+  hostname: 'https://safe-headland-70202.herokuapp.com/',
   port: 80,
   delayInMilliseconds: 1500,
   cacheNumberOfTweets: 20
